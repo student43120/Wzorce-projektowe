@@ -1,2 +1,77 @@
 # Wzorce-projektowe
-Krótkie omówienie wzorców projektowych wraz z zastosowaniem w poszczególnych problemach oraz projektach
+Omówienie wzorców projektowych wraz z zastosowaniem w poszczególnych problemach oraz projektach.
+
+
+Agnieszka Iżuk  
+
+Numer albumu: 43120  
+
+Kierunek: Magento PHP Developer  
+
+Link GitHub: https://github.com/student43120/Wzorce-projektowe.git  
+
+ 
+ 
+# Wzorce konstrukcyjne 
+
+BUDOWNICZY (BUILDER)  
+
+PULA OBIEKTÓW (OBJECT POOL) 
+
+SINGLETON (SINGLETON) 
+
+FABRYKA ABSTRAKCYJNA (ABSTRACT FACTORY) 
+
+FABRYKA (FACTORY) 
+
+SINGLETON (SINGLETON) 
+
+PROTOTYP (PROTOTYPE) 
+
+ 
+
+# Wzorce strukturalne 
+
+ADAPTER (ADAPTER) 
+
+DEKORATOR (DECORATOR) 
+
+FASADA (FACADE) 
+
+KOMPOZYT (COMPOSITE) 
+
+MOST (BRIDGE) 
+
+PYŁEK (FLYWEIGHT) 
+
+PEŁNOMOCNIK (PROXY) 
+
+ 
+
+# Wzorce behawioralne: 
+
+LENIWA INICJALIZACJA (LAZY INICJALIZATION) 
+
+ITERATOR (ITERATOR) 
+
+INTERPRETER (INTERPRETER) 
+
+ŁAŃCUCH ZOBOWIĄZAŃ (CHAIN OF RESPONSIBILITY) 
+
+MEDIATOR (MEDIATOR)  
+
+METODA SZABLONOWA (TEMPLATE METHOD)  
+
+OBSERWATOR (OBSERVER) 
+
+ODWIEDZAJĄCY (VISITOR)  
+
+BARRIER (BARIERA) 
+
+POLECENIE (COMMAND) 
+
+STRATEGIA (STRATEGY) 
+
+STAN (STATE) 
+
+WZÓR(TEMPLATE) 
