@@ -57,8 +57,7 @@ class politicalPoster extends Poster {
 
 
 ___________________________________________________________________________________
-
-Code After:
+BEFORE:
 
 <?php
 class Poster {
