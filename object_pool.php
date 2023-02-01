@@ -2,7 +2,7 @@
 
 <?php
 
-class routerPool
+class RouterPool
 {
     private static $pool = [];
 
@@ -103,7 +103,7 @@ class OrdersDetail
     }
 }
 
-class routerPool
+class RouterPool
 {
     public function main()
     {
