@@ -1,0 +1,48 @@
+<?php
+
+interface Register
+{
+    public function registration($data);
+}
+
+class registrationToservice implements Register
+{
+
+    public function registration($data)
+    {
+        echo "{$data}: registration to the service \n";
+    }
+}
+
+class registrationToDatabase implements Register
+{
+    public function registration($data)
+    {
+        echo "{$data}: registration to the database \n";
+    }
+}
+
+class registrationToWebService implements Register
+{
+    public function registration($data)
+    {
+        echo "{$data}: registration to the Web service \n";
+    }
+}
+
+// Implementation of strategy
+
+class App
+{
+    public function registration($data, Register $Register)
+    {
+        $Register->registration($data);
+    }
+}
+
+$app = new App();
+$app->registration('Info', new registrationToservice());
+
+?>
+
+
