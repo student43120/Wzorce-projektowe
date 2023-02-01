@@ -175,3 +175,98 @@ class Main
 }
 Main::main($argv);
 ?>
+
+
+
+____________________________________________________________
+
+
+Wrong code:
+
+
+<?php
+
+class Main
+{
+    function __construct(){
+    }
+    public static function Main()
+    {
+        $local_this = new Main();
+        return $local_this;
+    }
+    public static function main(&$args)
+    {
+        $minotaur = Minotaur::Minotaur("Wojowniku! Na Twojej drodz? staje Minotaur!", "Minotaur", 100, 50, "Ryk");
+        $kappa = Kappa::Kappa("Wojowniku! Na Twojej drodz? staje Kappa!", "Kappa", 60, 70, "Krzyk");
+        $howManyCoppy = 2;
+        for ($i = 0; $i < $howManyCoppy; $i++)
+        {
+            print_r($minotaur);
+            echo "------------------------------------------","\n";
+        }
+        for ($i = 0; $i < $howManyCoppy; $i++)
+        {
+            print_r($kappa);
+            echo "------------------------------------------","\n";
+        }
+    }
+}class Kappa
+{
+    function __construct(){
+        $this->describe = NULL;
+        $this->species = NULL;
+        $this->live = 0;
+        $this->strength = 0;
+        $this->attack = NULL;
+    }
+    public $describe;
+    public $species;
+    public $live;
+    public $strength;
+    public $attack;
+    public static function Kappa($describe, $species, $live, $strength, $attack)
+    {
+        $local_this = new Kappa();
+        $local_this->describe = $describe;
+        $local_this->species = $species;
+        $local_this->live = $live;
+        $local_this->strength = $strength;
+        $local_this->attack = $attack;
+        return $local_this;
+    }
+    public function toString()
+    {
+        return "KREATURA" . strval('\n') . "describe: " . $this->describe . strval('\n') . "species: " . $this->species . strval('\n') . "live: " . strval($this->live) . strval('\n') . "strength: " . strval($this->strength) . strval('\n') . "attack: " . $this->attack;
+    }
+}class Minotaur
+{
+    function __construct(){
+        $this->describe = NULL;
+        $this->species = NULL;
+        $this->live = 0;
+        $this->strength = 0;
+        $this->attack = NULL;
+    }
+    public $describe;
+    public $species;
+    public $live;
+    public $strength;
+    public $attack;
+    public static function Minotaur($describe, $species, $live, $strength, $attack)
+    {
+        $local_this = new Minotaur();
+        $local_this->describe = $describe;
+        $local_this->species = $species;
+        $local_this->live = $live;
+        $local_this->strength = $strength;
+        $local_this->attack = $attack;
+        return $local_this;
+    }
+    public function toString()
+    {
+        return "MINOTAUR" . strval('\n') . "describe: " . $this->describe . strval('\n') . "species: " . $this->species . strval('\n') . "live: " . strval($this->live) . strval('\n') . "strength: " . strval($this->strength) . strval('\n') . "attack: " . $this->attack;
+    }
+}
+Main::main($argv);
+?>
