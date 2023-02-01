@@ -62,5 +62,8 @@ class keyboardChange implements laptopService
     }
 }
 
-$service = new batteryChange(new keyboardChange(new Overview()));
+
+$service = new batteryChange();
+$service = new keyboardChange($service);
+$service = new Overview($service)
 echo $service->getListtoDo();
