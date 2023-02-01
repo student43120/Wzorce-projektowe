@@ -1,7 +1,7 @@
 <?php
 
 
-class BasketballTeamIterator implements Iterator, Countable {
+class BasketballTeamIterator{
 
     private $level = 0;
     private $teamteamMembers = [];
