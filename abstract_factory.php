@@ -1,6 +1,7 @@
 <?php
 
 class Samochod
+
 {
     function construct()
     {
@@ -15,7 +16,7 @@ class Samochod
     private $color;
     private $pojemnosc;
     private $moc;
-    public static function Samochod($marka, $model, $color, $pojemnosc, $moc)
+    public function Samochod($marka, $model, $color, $pojemnosc, $moc)
     
     {
         $local_this = new Samochod();
@@ -32,17 +33,17 @@ class FabrykaSamochodowAudiImpl
 {
     function construct(){}
     
-    public static function FabrykaSamochodowAudiImpl()
+    public function FabrykaSamochodowAudiImpl()
     
     {
         $local_this = new FabrykaSamochodowAudiImpl();
         return $local_this;
     }
     
-    public static function stworzSamochod()
+    public  function stworzSamochod()
     
     {
-        return Samochod::Samochod("Audi", "A3", "złoty", 1.9, 110);
+        return Samochod::Samochod("Audi", "Q8", "złoty", 1.9, 110);
     }
 }
 
@@ -50,34 +51,34 @@ class FabrykaSamochodowBMWImpl
 {
     function construct(){}
     
-    public static function FabrykaSamochodowBMWImpl()
+    public function FabrykaSamochodowBMWImpl()
     
     {
-        $local_this = new FabrykaSamochodowBMWImpl();
+        $local_this = new FabrykaSamochodowBMW();
         return $local_this;
     }
     
-    public static function stworzSamochod()
+    public function stworzSamochod()
     
     {
-        return Samochod::Samochod("BMW", "E91", "zielony", 2.0, 150);
+        return Samochod::Samochod("BMW", "X5", "zielony", 2.0, 150);
     }
 }
 
-class FabrykaSamochodowMazdaMx5Impl
+class FabrykaSamochodowMazda
 {
     function construct(){}
 
-    public static function FabrykaSamochodowMazdaMx5Impl()
+    public function FabrykaSamochodowMazda()
     
     {
-        $local_this = new FabrykaSamochodowMazdaMx5Impl();
+        $local_this = new FabrykaSamochodowMazda();
         return $local_this;
     }
     
-    public static function stworzSamochod()
+    public function stworzSamochod()
     {
-        return Samochod::Samochod("Mazda", "MX-5", "inny", 1.6, 120);
+        return Samochod::Samochod("Mazda", "RS6", "inny", 1.6, 120);
     }
 }
 
@@ -124,4 +125,3 @@ class Samochod
 }
 
 ?>
-
