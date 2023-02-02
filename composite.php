@@ -66,3 +66,39 @@ class CompositeCategory extends Category
 }
 
 ?>
+
+_______________________________________________________________
+
+Wrong code:
+<?php
+
+class Category
+{
+    public string $name;
+    public function __construct($name)
+    {
+        $this->name = $name;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function setName($name): void
+    {
+        $this->name = $name;
+    }
+}
+
+$categories = [
+    new Category('Konsola'),
+    new Category('Konsola Przenośna'),
+    new Category('Game Pass'),
+];
+
+foreach ($categories as $category) {
+    echo $category->getName() . PHP_EOL;
+}
+
+?>
