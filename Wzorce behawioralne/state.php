@@ -1,8 +1,4 @@
 <?php
-namespace Car;
-
-use doorOpen;
-use Stop;
 
 class Car
 {
