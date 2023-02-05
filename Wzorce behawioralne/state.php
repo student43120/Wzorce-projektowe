@@ -1,8 +1,4 @@
 <?php
-namespace Car;
-
-use doorOpen;
-use Stop;
 
 class Car
 {
@@ -49,13 +45,6 @@ class Car
     }
 }
 
-//Car state
-
-use carExeption;
-use doorClose;
-use Drive;
-use doorOpen;
-use Stop;
 
 class CarState implements CarStateInterface
 {
@@ -80,13 +69,6 @@ class CarState implements CarStateInterface
     }
 }
 
-
-//State Interface
-
-use doorClose;
-use Drive;
-use doorOpen;
-use Stop;
 
 interface CarStateInterface
 {

@@ -1,4 +1,4 @@
-command - final class Electoral
+<?php
 {
     private string $nick;
 
@@ -118,7 +118,7 @@ final class Against implements CommandInterface
     }
 }
 
-
+?>
 ___________________________________________________________________________________________
 
 Wrong code:
