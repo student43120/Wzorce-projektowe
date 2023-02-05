@@ -30,13 +30,11 @@ class registrationToWebService implements Register
     }
 }
 
-// Implementation of strategy
-
 class App
 {
-    public function registration($data, Register $Register)
+    public function registration($data, register $register)
     {
-        $Register->registration($data);
+        $register->registration($data);
     }
 }
 
@@ -45,4 +43,58 @@ $app->registration('Info', new registrationToservice());
 
 ?>
 
+___________________________________________________________________________________________
 
+Wrong code:
+
+<php?
+
+$registration = new Register();
+$dataLoad= new Data();
+
+class Registration
+{
+    private $register;
+    private $data;
+
+    public function getregister()
+    {
+        return $this->register;
+    }
+
+    public function setregister($register)
+    {
+        $this->register = $register;
+
+        return $this;
+    }
+
+}
+
+class registrationToservice extends Registration
+{
+    public function __construct()
+    {
+        parent::setRegistrationType('registrationToservice');
+    }
+}
+
+class registrationToDatabase extends Registration
+{
+    public function __construct()
+    {
+        parent::setRegistrationType('registrationToDatabase');
+    }
+}
+
+
+class registrationToWebService extends Register
+{
+    public function __construct()
+    {
+        parent::setRegistrationType('registrationToWebService');
+    }
+
+}
+
+?>
