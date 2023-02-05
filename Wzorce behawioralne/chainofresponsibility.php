@@ -2,28 +2,28 @@
 
 abstract class healthChecker
 {
-    protected $successor;
+    protected $doctor;
 
-    public abstract function check(patientStatus $patient);
+    public abstract function check(patientWellBeing $patient);
 
-    public function successor(healthChecker $successor)
+    public function doctor(healthChecker $doctor)
     {
-        $this->successor = $successor;
+        $this->doctor = $doctor;
     }
 
-    public function next(patientStatus $patient)
+    public function next(patientWellBeing $patient)
     {
-        if ($this->successor) {
-            $this->successor->check($patient);
+        if ($this->doctor) {
+            $this->doctor->check($patient);
         }
     }
 }
 
 class Stomach extends healthChecker
 {
-    public function check(patientStatus $patient)
+    public function check(patientWellBeing $patient)
     {
-        if (!$patient->locked) {
+        if (!$patient->patientComfort) {
             echo "In stomach" + $patient +"don't feel any pain";
         }
 
@@ -34,9 +34,9 @@ class Stomach extends healthChecker
 class Chest extends healthChecker
 {
 
-    public function check(patientStatus $patient)
+    public function check(patientWellBeing $patient)
     {
-        if (!$patient->lightOff) {
+        if (!$patient->patientChestpain) {
             echo "in Chest we don't see any changes \n";
         }
 
@@ -47,9 +47,9 @@ class Chest extends healthChecker
 class Head extends healthChecker
 {
 
-    public function check(patientStatus $patient)
+    public function check(patientWellBeing $patient)
     {
-        if (!$patient->HeadOn) {
+        if (!$patient->patientHeadPain) {
             echo "Head wasn't checked \n";
         }
 
@@ -57,18 +57,18 @@ class Head extends healthChecker
     }
 }
 
-class patientStatus
+class patientWellBeing
 {
-    public $HeadOn = true;
-    public $locked = true;
-    public $lightOff = false;
+    public $patientHeadPain = true;
+    public $patientComfort = true;
+    public $patientChestpain = false;
 }
 
 $Stomach  = new Stomach();
 $Chest = new Chest();
 $Head  = new Head();
 
-$Stomach->successor($Chest);
-$Chest->successor($Head);
+$Stomach->doctor($Chest);
+$Chest->doctor($Head);
 
-$Stomach->check(new patientStatus());
+$Stomach->check(new patientWellBeing());
