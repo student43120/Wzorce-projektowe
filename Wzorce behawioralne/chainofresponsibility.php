@@ -49,7 +49,7 @@ class Head extends healthChecker
 
     public function check(patientStatus $patient)
     {
-        if (!$patient->HeadOn) {
+        if (!$patient->headOn) {
             echo "Head wasn't checked \n";
         }
 
@@ -59,7 +59,7 @@ class Head extends healthChecker
 
 class patientStatus
 {
-    public $HeadOn = true;
+    public $headOn = true;
     public $locked = true;
     public $lightOff = false;
 }
